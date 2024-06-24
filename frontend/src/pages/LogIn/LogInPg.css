@@ -1,0 +1,77 @@
+/* LogInPg.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+  }
+  
+  h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .login-button, .signup-button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+  
+  .login-button:hover, .signup-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .google-login-button {
+    width: 100% !important;
+    padding: 0 !important;
+    height: auto !important;
+    border: none !important;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .google-login-button div {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .google-login-button span {
+    padding-left: 0.5rem;
+  }
+  
