@@ -8,13 +8,6 @@ import toast from 'react-hot-toast';
 import { UserContext } from '../../context/UserContext';
 
 const LogInPg = () => {
-//   const handleLoginSuccess = (response) => {
-//     console.log('Login Success:', response.profileObj);
-//   };
-
-//   const handleLoginFailure = (response) => {
-//     console.log('Login Failed:', response);
-//   };
 
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
@@ -30,7 +23,9 @@ const handleLogin = async (e) => {
         const userCredential = await signInWithEmailAndPassword(auth,email,password);
         const user = userCredential.user;
         const displayName = user.displayName || 'User';
+        const userData = { email: user.email, displayName };
         setUser({ email: user.email, displayName });
+        localStorage.setItem('user', JSON.stringify(userData));
         console.log("Login Success!!", user);
         toast.success(`Login Success ${displayName}`);
         navigate('/home');
