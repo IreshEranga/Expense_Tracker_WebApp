@@ -1,45 +1,43 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 import List from './List.js';
+import '../App.css';
 
-export default function Form() {
-  const { register, handleSubmit, reset } = useForm();
 
-  const onSubmit = (data) => {
-    if (!data) return;
-    console.log(data); // You can replace this with the appropriate action
-    reset({
-      name: '',
-      type: 'Investment', // Resetting to default value
-      amount: ''
-    });
-  };
-
+function BasicExample() {
   return (
-    <div className="form max-w-sm mx-auto w-96">
+    <div>
+      <Form className='transform' style={{border:'1px solid black'}}>
       <h1 className='font-bold pb-4 text-xl' style={{textAlign:'center'}}>Transaction</h1>
+      <Form.Group className="mb-3" controlId="formBasicEmail">
+        
+        <Form.Control type="text" id="name" placeholder="Salary, House Rent, SIP" />
+        
+      </Form.Group>
 
-      <form id='form' onSubmit={handleSubmit(onSubmit)} style={{marginLeft:'50px'}}>
-        <div className="grid gap-4">
-          <div className="input-group">
-           
-            <input type="text" id="name" {...register('name')} placeholder='Salary, House Rent, SIP' className='form-input' />
-          </div>
-          <select id="type" className='form-input' {...register('type')} style={{width:'30%'}}>
-            <option value="Investment">Investment</option>
-            <option value="Expense">Expense</option>
-            <option value="Savings">Savings</option>
-          </select>
-          <div className="input-group">
-            <input type="text" id="amount" {...register('amount')} placeholder='Amount' className='form-input' />
-          </div>
-          <div className="submit-btn">
-            <button type="submit" className='border py-2 text-white bg-indigo-500 w-full'>Make Transaction</button>
-          </div>
-        </div>
-      </form>
+      <Form.Group className="mb-3">
+        
+        <Form.Select >
+          <option>Investment</option>
+          <option>Expense</option>
+          <option>Savings</option>
+        </Form.Select>
+      </Form.Group>
 
-      <List />
+      <Form.Group className="mb-3">
+        
+        <Form.Control type="text" id='amount' placeholder="Amount" />
+      </Form.Group>
+      
+      <Button variant="primary" type="submit">
+        Save Transaction
+      </Button>
+    </Form>
+    <List/>
     </div>
+
+    
   );
 }
+
+export default BasicExample;
