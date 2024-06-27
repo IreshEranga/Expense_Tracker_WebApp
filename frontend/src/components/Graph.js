@@ -24,7 +24,7 @@ Chart.register(ArcElement);
             }]
     },
     options:{
-        cutout:135
+        cutout:115
     }
   }
 

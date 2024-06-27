@@ -51,7 +51,7 @@ const Home = () => {
 
       <div className="grid md:grid-cols-2 gap-4">
         {/* chart */}
-        <div style={{ maxWidth: '400px', margin: '0 auto', marginTop: '30px' }}>
+        <div className="md:col-span-2" style={{ maxWidth: '400px', margin: '0 auto', marginTop: '30px' }}>
           <Graph />
         </div>
 
