@@ -38,7 +38,8 @@
 .chart {
   position: relative;
   height: 0;
-  padding-bottom: 100%; /* Aspect ratio of 1:1 (square) */
+  padding-bottom: 100%; 
+  margin-bottom: 50px;/* Aspect ratio of 1:1 (square) */
 }
 
 .title {
@@ -51,6 +52,38 @@
 
 .title span{
   color: rgb(19, 214, 38);
+}
+
+
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem; 
+}
+
+.labels .flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; 
+}
+
+.labels .w-4 {
+  width: 2rem; 
+  height: 2rem; 
+}
+
+.labels .rounded-full {
+  border-radius: 30%; 
+}
+
+.text-md {
+  font-size: 1rem; 
+}
+
+.font-bold {
+  font-weight: bold;
 }
 
 
