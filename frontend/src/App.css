@@ -28,6 +28,32 @@
   color: #61dafb;
 }
 
+
+.donut {
+  width: 100%;
+  height: auto;
+  max-width: 400px; /* Set a maximum width for larger screens */
+}
+
+.chart {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%; /* Aspect ratio of 1:1 (square) */
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.title span{
+  color: rgb(19, 214, 38);
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +62,4 @@
     transform: rotate(360deg);
   }
 }
+

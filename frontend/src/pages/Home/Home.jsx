@@ -16,7 +16,9 @@ const Home = () => {
 
         <div className="grid md:grid-cols-2 gap-4">
           {/* chart */}
-          <Graph/>
+          <div style={{ maxWidth: '400px', margin: '0 auto',marginTop:'30px' }}>
+          <Graph />
+        </div>
 
           {/* form */}
         </div>
